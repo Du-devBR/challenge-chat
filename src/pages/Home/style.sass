@@ -1,0 +1,93 @@
+.container
+  display: grid
+  grid-template-columns: 350px 1fr
+  grid-template-areas: 'chat conversation'
+  height: 100vh
+
+  .container-chat
+    grid-area: chat
+    background-color: #161616
+    border-right: solid 1px #313131
+
+    .container-header
+      display: flex
+      justify-content: space-between
+      align-items: center
+      background-color: #212121
+      padding: 16px
+
+      .avatar-user
+        width: 48px
+        height: 48px
+        border-radius: 100%
+
+      .nav-list
+        display: flex
+        gap: 12px
+
+        li
+          cursor: pointer
+
+
+  .container-chat-conversation
+    grid-area: conversation
+
+    .header-conversation
+      display: flex
+      justify-content: space-between
+      background-color: #212121
+      padding: 16px
+      align-items: center
+
+      .contact-conversation
+        display: flex
+        gap: 16px
+        align-items: center
+
+        .avatar-contact
+          width: 48px
+          height: 48px
+          border-radius: 100%
+
+        .info-contact
+          display: flex
+          flex-direction: column
+          gap: 4px
+
+          .name-contact
+            font-size: 16px
+            font-weight: bold
+            color: #e1e1e6
+
+          .status
+            display: flex
+            align-items: center
+            gap: 4px
+
+            .dot
+              width: 8px
+              height: 8px
+              background-color: #00b37e
+              border-radius: 100%
+
+            .status-online
+              font-size: 12px
+              color: #00b37e
+
+
+      .close-conversation
+        background-color: #e1e1e6
+        border: none
+        width: 2px
+        height: 20px
+        transform: rotate(45deg)
+        cursor: pointer
+
+      .close-conversation::before
+        content: ''
+        display: inline-block
+        background-color: #e1e1e6
+        border: none
+        width: 2px
+        height: 20px
+        transform: rotate(90deg)
