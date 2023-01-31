@@ -1,5 +1,6 @@
 export const infoContact = [
   {
+    id: 1,
     nome: 'React',
     picture: 'https://ionicframework.com/docs/icons/logo-react-icon.png',
     message: [{
@@ -16,6 +17,7 @@ export const infoContact = [
     }]
   },
   {
+    id: 2,
     nome: 'Javascript',
     picture: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png',
     message: [{
@@ -36,6 +38,7 @@ export const infoContact = [
     }]
   },
   {
+    id: 3,
     nome: 'Html',
     picture: 'https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582748_640.png',
     message: [{
@@ -56,6 +59,7 @@ export const infoContact = [
     }]
   },
   {
+    id: 4,
     nome: 'CSS',
     picture: 'https://logospng.org/download/css-3/logo-css-3-2048.png',
     message: [{
@@ -76,6 +80,7 @@ export const infoContact = [
     },]
   },
   {
+    id: 5,
     nome: 'Spring boot',
     picture: 'https://user-images.githubusercontent.com/33158051/103925017-e7673b80-50e4-11eb-9379-ceb82e3f382c.png',
     message: [{
@@ -96,6 +101,7 @@ export const infoContact = [
     }]
   },
   {
+    id: 6,
     nome: 'Github',
     picture: 'https://pbs.twimg.com/profile_images/1414990564408262661/r6YemvF9_400x400.jpg',
     message: [{
