@@ -4,7 +4,7 @@ export function Contact(props){
 
   const lastMessageContact = props.data.message[props.data.message.length - 1]
   return(
-    <div className='container-contact'>
+    <div className='container-contact' onClick={() => props.onSelectContact(props.data)}>
       <div className="contact">
         <img className='avatar-contact' src={props.data.picture} alt="" />
         <div className="info-contact">

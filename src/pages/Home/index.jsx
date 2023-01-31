@@ -4,14 +4,17 @@ import { Contact } from '../../components/Contact';
 import { useState } from 'react';
 import { infoContact } from '../../assets/db/infoContact'
 import { useEffect } from 'react';
+import { useParams} from 'react-router-dom'
+
 export function HomePage(){
 
   const [contact, setContacts] = useState([])
+  const [ selectContact, setSelectContact] = useState({})
+  const { id } = useParams()
 
   useEffect(() => {
     setContacts(infoContact)
   })
-
 
   return(
     <div className="container">
@@ -28,9 +31,12 @@ export function HomePage(){
         <div className="list-chat">
           <ul>
             {
-              contact.map(contact => (
+              contact.map((contacts) => (
                 <Contact
-                  data={contact}
+                  key={contacts.id}
+                  id={contacts.id}
+                  data={contacts}
+                  onSelectContact = {currentContact => setSelectContact(currentContact)}
                 />
               ))
             }
@@ -40,9 +46,9 @@ export function HomePage(){
       <div className="container-chat-conversation">
         <div className="header-conversation">
           <div className="contact-conversation">
-            <img className='avatar-contact' src="https://pps.whatsapp.net/v/t61.24694-24/321189497_188822440395119_3042720346348937263_n.jpg?stp=dst-jpg_s96x96&ccb=11-4&oh=01_AdQK3W03sL12Up0Bs_McuS9GzYX0PhnOAg83VPRGs3jGLg&oe=63E54832" alt="" />
+            <img className='avatar-contact' src={selectContact.picture} alt="" />
             <div className='info-contact'>
-              <span className='name-contact'>Camila</span>
+              <span className='name-contact'>{selectContact.nome}</span>
               <div className="status">
                 <span className='dot'></span>
                 <span className='status-online'>Online</span>
