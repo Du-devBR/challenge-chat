@@ -1,6 +1,17 @@
 import './style.sass'
 import { UsersThree, CircleDashed, DotsThreeOutlineVertical, ChatText } from "phosphor-react";
+import { Contact } from '../../components/Contact';
+import { useState } from 'react';
+import { infoContact } from '../../assets/db/infoContact'
+import { useEffect } from 'react';
 export function HomePage(){
+
+  const [contact, setContacts] = useState([])
+
+  useEffect(() => {
+    setContacts(infoContact)
+  })
+
 
   return(
     <div className="container">
@@ -14,6 +25,17 @@ export function HomePage(){
             <li><DotsThreeOutlineVertical size={20} color="#E1E1E6" weight="fill" /></li>
           </ul>
         </header>
+        <div className="list-chat">
+          <ul>
+            {
+              contact.map(contact => (
+                <Contact
+                  data={contact}
+                />
+              ))
+            }
+          </ul>
+        </div>
       </div>
       <div className="container-chat-conversation">
         <div className="header-conversation">
