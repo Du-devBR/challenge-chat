@@ -3,11 +3,13 @@
   grid-template-columns: 350px 1fr
   grid-template-areas: 'chat conversation'
   height: 100vh
+  overflow: hidden
 
   .container-chat
     grid-area: chat
     background-color: #161616
     border-right: solid 1px #313131
+    height: 100%
 
     .container-header
       display: flex
@@ -27,6 +29,18 @@
 
         li
           cursor: pointer
+
+    .list-chat
+      height: calc( 100vh - 80px )
+      overflow-y: scroll
+
+    .list-chat::-webkit-scrollbar
+      width: 5px
+      height: 5px
+
+    .list-chat::-webkit-scrollbar-thumb
+      background-color: #212121
+
 
 
   .container-chat-conversation
