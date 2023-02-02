@@ -1,7 +1,9 @@
 import './style.sass'
 
-export function Message(){
+export function Message(props){
+
+  console.log(props)
   return(
-    <div></div>
+    <p>{props.messageText.content}</p>
   )
 }
