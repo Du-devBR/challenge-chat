@@ -72,9 +72,12 @@ export function HomePage(){
               <li className='message-text'>
                 {
                   message.map(message =>(
-                    <Message
-                      messageText={message}
-                    />
+                    <div className='message'>
+                      <span>{selectContact.nome} - {message.hour}</span>
+                      <Message
+                        messageText={message}
+                      />
+                    </div>
                   ))
                 }
               </li>
