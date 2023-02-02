@@ -5,16 +5,22 @@ import { useState } from 'react';
 import { infoContact } from '../../assets/db/infoContact'
 import { useEffect } from 'react';
 import { useParams} from 'react-router-dom'
+import { Message } from '../../components/Message';
 
 export function HomePage(){
 
   const [contact, setContacts] = useState([])
-  const [ selectContact, setSelectContact] = useState({})
+  const [ selectContact, setSelectContact] = useState([])
+  const [message, setMessage] = useState()
   const { id } = useParams()
 
   useEffect(() => {
     setContacts(infoContact)
   })
+
+  useEffect(() => {
+    setMessage(selectContact.message)
+  }, [selectContact])
 
   return(
     <div className="container">
@@ -58,6 +64,22 @@ export function HomePage(){
           <button
             className='close-conversation'>
           </button>
+        </div>
+        <div className="container-message">
+          <ul>
+            {
+              message !== undefined &&
+              <li className='message-text'>
+                {
+                  message.map(message =>(
+                    <Message
+                      messageText={message}
+                    />
+                  ))
+                }
+              </li>
+            }
+          </ul>
         </div>
       </div>
     </div>
