@@ -45,6 +45,12 @@
 
   .container-chat-conversation
     grid-area: conversation
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 100vh
+    box-sizing: border-box
 
     .header-conversation
       display: flex
@@ -105,3 +111,34 @@
         width: 2px
         height: 20px
         transform: rotate(90deg)
+
+    .input-message
+      display: flex
+      box-sizing: border-box
+      align-items: center
+      border: none
+      border-radius: 999px
+      background-color: #282843
+      padding: 19px 24px
+      margin: 32px 16px
+      overflow: hidden
+
+      .teste
+        background-color: transparent
+        border: none
+        cursor: pointer
+
+      input
+        width: 100%
+        // box-sizing: border-box
+        border: none
+        // border-radius: 999px
+        font-size: 14px
+        font-weight: 300
+        color: #e1e1e6
+        background-color: transparent
+
+      ::placeholder
+        color: #E1E1E6
+        font-size: 12px
+        font-weight: 300

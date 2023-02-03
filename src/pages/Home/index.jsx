@@ -1,5 +1,5 @@
 import './style.sass'
-import { UsersThree, CircleDashed, DotsThreeOutlineVertical, ChatText } from "phosphor-react";
+import { UsersThree, CircleDashed, DotsThreeOutlineVertical, ChatText, PaperPlaneRight } from "phosphor-react";
 import { Contact } from '../../components/Contact';
 import { useState } from 'react';
 import { infoContact } from '../../assets/db/infoContact'
@@ -83,6 +83,17 @@ export function HomePage(){
               </li>
             }
           </ul>
+        </div>
+        <div className="input-message">
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder='Digite Sua mensagem'
+          />
+          <button className="teste">
+            <PaperPlaneRight size={32} color="#fafafa" weight="fill" />
+          </button>
         </div>
       </div>
     </div>
